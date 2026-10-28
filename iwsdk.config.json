@@ -13,6 +13,8 @@
       "mode": "ar",
       "offer": "always",
       "features": {
+        "planeDetection": true,
+        "depthSensing": {"required": false, "usage": "gpu-optimized", "format": "float32"},
         "handTracking": true
       }
     },
@@ -40,7 +42,7 @@
       "locomotion": false,
       "grabbing": true,
       "physics": false,
-      "sceneUnderstanding": false,
+      "sceneUnderstanding": true,
       "environmentRaycast": false,
       "spatialUI": {
         "kit": "horizon",

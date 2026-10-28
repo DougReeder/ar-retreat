@@ -56,8 +56,4 @@ export default defineAssets({
     name: 'Robot',
     priority: 'lazy',
   },
-  'welcome-panel': uikitml('welcome.uikitml', 'Welcome Panel'),
-  'label-grab': uikitml('label-grab.uikitml', 'Grab Label'),
-  'label-select': uikitml('label-select.uikitml', 'Select Label'),
-  'label-spin': uikitml('label-spin.uikitml', 'Spin Label'),
 });

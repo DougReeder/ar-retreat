@@ -156,25 +156,6 @@ function createLatticeTexture(size = 512): DataTexture {
   return pixelTexture(size, pixels);
 }
 
-/**
- * Square clay floor with a faint diamond lattice. The scene's DomeFade on
- * this node blends it into the sky with distance, so it has no visible edge.
- */
-export function createStudioFloor(size = 36): Group {
-  const lattice = createLatticeTexture();
-  lattice.wrapS = lattice.wrapT = RepeatWrapping;
-  // 1.2 m x 1.92 m diamonds: 1.6x longer in depth than across.
-  lattice.repeat.set(size / (0.6 * 2), size / (0.6 * 3.2));
-  const floor = createScenePrimitiveObject(
-    { geometry: { type: 'plane', size: [size, size] } },
-    new MeshStandardMaterial({ map: lattice, roughness: 0.95 }),
-  );
-  floor.rotation.x = -Math.PI / 2;
-  const root = new Group();
-  root.add(floor);
-  return root;
-}
-
 /** Low turned stage with an inset stone ring. */
 export function createStage(radius = 1.85): Group {
   const height = 0.035;

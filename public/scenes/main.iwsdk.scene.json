@@ -54,33 +54,6 @@
       "children": [
         {
           "components": {
-            "ContactShadow": {
-              "color": [
-                0,
-                0,
-                0,
-                1
-              ],
-              "height": 0.0016,
-              "opacity": 0.4,
-              "size": [
-                0.8,
-                0.8
-              ]
-            }
-          },
-          "id": "grab-plinth-contact",
-          "name": "Contact Shadow",
-          "transform": {
-            "position": [
-              0,
-              0.002,
-              0
-            ]
-          }
-        },
-        {
-          "components": {
             "DistanceGrabbable": {
               "movementMode": "MoveFromTarget"
             },
@@ -106,33 +79,6 @@
               0
             ],
             "scale": 1.2
-          }
-        },
-        {
-          "components": {
-            "ContactShadow": {
-              "color": [
-                0,
-                0,
-                0,
-                1
-              ],
-              "height": 0.00052,
-              "opacity": 0.4,
-              "size": [
-                0.26,
-                0.26
-              ]
-            }
-          },
-          "id": "graphite-cube-contact",
-          "name": "Contact Shadow",
-          "transform": {
-            "position": [
-              -0.25,
-              0.921,
-              -0.03
-            ]
           }
         },
         {
@@ -166,33 +112,6 @@
         },
         {
           "components": {
-            "ContactShadow": {
-              "color": [
-                0,
-                0,
-                0,
-                1
-              ],
-              "height": 0.00048,
-              "opacity": 0.4,
-              "size": [
-                0.24,
-                0.24
-              ]
-            }
-          },
-          "id": "graphite-gem-contact",
-          "name": "Contact Shadow",
-          "transform": {
-            "position": [
-              0,
-              0.921,
-              -0.03
-            ]
-          }
-        },
-        {
-          "components": {
             "DistanceGrabbable": {
               "movementMode": "MoveFromTarget"
             },
@@ -219,47 +138,9 @@
             ],
             "scale": 0.74
           }
-        },
-        {
-          "components": {
-            "ContactShadow": {
-              "color": [
-                0,
-                0,
-                0,
-                1
-              ],
-              "height": 0.00052,
-              "opacity": 0.4,
-              "size": [
-                0.26,
-                0.26
-              ]
-            }
-          },
-          "id": "graphite-knot-contact",
-          "name": "Contact Shadow",
-          "transform": {
-            "position": [
-              0.25,
-              0.921,
-              -0.03
-            ]
-          }
         }
       ],
-      "components": {
-        "com.iwsdk.components.DepthOccludable": {
-          "mode": "MinMaxSoftOcclusion"
-        }
-      },
-      "content": {
-        "asset": "plinth",
-        "castShadow": true,
-        "receiveShadow": true,
-        "type": "asset"
-      },
-      "id": "grab-plinth",
+      "id": "grabbables",
       "name": "Grab Plinth",
       "transform": {
         "position": [
@@ -276,142 +157,6 @@
     },
     {
       "children": [
-        {
-          "components": {
-            "ContactShadow": {
-              "color": [
-                0,
-                0,
-                0,
-                1
-              ],
-              "height": 0.0016,
-              "opacity": 0.4,
-              "size": [
-                0.8,
-                0.8
-              ]
-            }
-          },
-          "id": "select-plinth-contact",
-          "name": "Contact Shadow",
-          "transform": {
-            "position": [
-              0,
-              0.002,
-              0
-            ]
-          }
-        },
-        {
-          "components": {
-            "AudioSource": {
-              "maxInstances": 3,
-              "playbackMode": "fade-restart",
-              "src": "./audio/chime.mp3"
-            },
-            "RayInteractable": {},
-            "Robot": {}
-          },
-          "content": {
-            "asset": "robot",
-            "castShadow": true,
-            "type": "asset"
-          },
-          "id": "robot",
-          "metadata": {
-            "iwsdk.validation": {
-              "allowFloating": true
-            }
-          },
-          "name": "Robot",
-          "transform": {
-            "position": [
-              0,
-              1.2,
-              -0.02
-            ],
-            "scale": 0.6
-          }
-        },
-        {
-          "components": {
-            "ContactShadow": {
-              "color": [
-                0,
-                0,
-                0,
-                1
-              ],
-              "height": 0.00074,
-              "opacity": 0.4,
-              "size": [
-                0.37,
-                0.37
-              ]
-            }
-          },
-          "id": "robot-contact",
-          "name": "Contact Shadow",
-          "transform": {
-            "position": [
-              0,
-              0.921,
-              -0.02
-            ]
-          }
-        }
-      ],
-      "components": {
-        "com.iwsdk.components.DepthOccludable": {
-          "mode": "MinMaxSoftOcclusion"
-        }
-      },
-      "content": {
-        "asset": "plinth",
-        "castShadow": true,
-        "receiveShadow": true,
-        "type": "asset"
-      },
-      "id": "select-plinth",
-      "name": "Select Plinth",
-      "transform": {
-        "position": [
-          0,
-          0,
-          -1.5
-        ]
-      }
-    },
-    {
-      "children": [
-        {
-          "components": {
-            "ContactShadow": {
-              "color": [
-                0,
-                0,
-                0,
-                1
-              ],
-              "height": 0.0016,
-              "opacity": 0.4,
-              "size": [
-                0.8,
-                0.8
-              ]
-            }
-          },
-          "id": "spin-plinth-contact",
-          "name": "Contact Shadow",
-          "transform": {
-            "position": [
-              0,
-              0.002,
-              0
-            ]
-          }
-        },
         {
           "components": {
             "DistanceGrabbable": {
@@ -434,47 +179,9 @@
               -0.02
             ]
           }
-        },
-        {
-          "components": {
-            "ContactShadow": {
-              "color": [
-                0,
-                0,
-                0,
-                1
-              ],
-              "height": 0.0008,
-              "opacity": 0.4,
-              "size": [
-                0.4,
-                0.4
-              ]
-            }
-          },
-          "id": "graphite-ring-contact",
-          "name": "Contact Shadow",
-          "transform": {
-            "position": [
-              0,
-              0.921,
-              -0.02
-            ]
-          }
         }
       ],
-      "components": {
-        "com.iwsdk.components.DepthOccludable": {
-          "mode": "MinMaxSoftOcclusion"
-        }
-      },
-      "content": {
-        "asset": "plinth",
-        "castShadow": true,
-        "receiveShadow": true,
-        "type": "asset"
-      },
-      "id": "spin-plinth",
+      "id": "spinnable",
       "name": "Spin Plinth",
       "transform": {
         "position": [

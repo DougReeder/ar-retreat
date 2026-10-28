@@ -7,17 +7,12 @@
 
 import { AssetType, defineAssets } from '@iwsdk/core';
 import {
-  createGallerySet,
-  createSideboardSet,
-} from './scene-assets/decor.scene-asset.js';
-import {
   createGraphiteCube,
   createGraphiteGem,
   createGraphiteKnot,
   createGraphiteRing,
   createPlinth,
   createStage,
-  createStudioFloor,
 } from './scene-assets/studio.scene-asset.js';
 
 const publicAssetUrl = (filePath: string): string =>
@@ -53,19 +48,10 @@ export default defineAssets({
     name: 'Birch 4',
     priority: 'background',
   },
-  'studio-floor': createStudioFloor(),
   stage: createStage(),
   plinth: createPlinth(),
   'graphite-cube': createGraphiteCube(),
   'graphite-gem': createGraphiteGem(),
   'graphite-knot': createGraphiteKnot(),
   'graphite-ring': createGraphiteRing(),
-  'gallery-set': createGallerySet(),
-  'sideboard-set': createSideboardSet(),
-  robot: {
-    url: stockAssetUrl('robot', 'robot.gltf'),
-    type: AssetType.GLTF,
-    name: 'Robot',
-    priority: 'lazy',
-  },
 });

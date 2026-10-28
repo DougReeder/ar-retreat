@@ -64,11 +64,11 @@ export class PlaneProcessSystem extends createSystem({
         if (!this.currentFloor || candidateDist < currentDist) {
             const area = entity.getValue(PlaneClassification, 'area');
             console.log(`setting new floor: area`, area, `y`, entity.object3D.position.y, `vertical dist. to target`, candidateDist);
-            if (this.currentFloor?.object3D) {
-                this.currentFloor.object3D.visible = false;
-            }
+            // if (this.currentFloor?.object3D) {
+            //     this.currentFloor.object3D.visible = false;
+            // }
             this.currentFloor = entity;
-            entity.object3D.visible = true;
+            // entity.object3D.visible = true;
 
             this.updateBirch1ForFloor(entity);
         }

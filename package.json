@@ -12,7 +12,9 @@
     "reference:warmup": "iwsdk reference warmup",
     "typecheck": "tsc --noEmit",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "presurge": "npm run build",
+    "surge": "surge dist https://ar-retreat.surge.sh"
   },
   "dependencies": {
     "@iwsdk/core": "1.1.0-rc.2",

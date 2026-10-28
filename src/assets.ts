@@ -41,6 +41,18 @@ const uikitml = (fileName: string, name: string) => ({
 });
 
 export default defineAssets({
+  'birch-1': {
+    url: publicAssetUrl('gltf/birch-1.glb'),
+    type: AssetType.GLTF,
+    name: 'Birch 1',
+    priority: 'background',
+  },
+  'birch-4': {
+    url: publicAssetUrl('gltf/birch-4.glb'),
+    type: AssetType.GLTF,
+    name: 'Birch 4',
+    priority: 'background',
+  },
   'studio-floor': createStudioFloor(),
   stage: createStage(),
   plinth: createPlinth(),

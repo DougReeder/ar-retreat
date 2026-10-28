@@ -134,17 +134,13 @@ export class PlaneProcessSystem extends createSystem({
             .normalize()
             .multiplyScalar(3.0);
 
-        this.birch1Entity.object3D!.position.set(
+        const localPos = new Vector3(
             farthestCornerLocal.x + offset.x,
             farthestCornerLocal.y,
             farthestCornerLocal.z + offset.z
         );
-        floorEntity.object3D!.add(this.birch1Entity.object3D!);
-
-        // Ensure the birch is right-side up in world space
-        this.birch1Entity.object3D!.updateWorldMatrix(true, false);
-        floorEntity.object3D!.getWorldQuaternion(this.tempQuat);
-        this.birch1Entity.object3D!.quaternion.copy(this.tempQuat).invert();
+        floorEntity.object3D!.localToWorld(localPos);
+        this.birch1Entity.object3D!.position.copy(localPos);
     }
 
     private destroyBirch1() {

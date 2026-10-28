@@ -2,6 +2,10 @@
 
 This file augments the repository-root `AGENTS.md` for files in this directory.
 
+# Heuristics
+
+Don't change Entity.destroy() to Entity.dispose().
+
 # ECS API reference
 
 ## Field types

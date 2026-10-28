@@ -53,11 +53,17 @@ export class PlaneProcessSystem extends createSystem({
     }
 
     private checkFloorCandidate(entity: Entity) {
-        if (!entity.object3D) { return; }
-        // @ts-ignore
-        if (!this.currentFloor || entity.object3D?.position.y < this.currentFloor.object3D?.position.y) {
+        if (!entity.object3D || !this.camera) { return; }
+
+        this.camera.getWorldPosition(this.tempVec);
+        const targetY = this.tempVec.y - 1.6;
+
+        const currentDist = this.currentFloor?.object3D ? Math.abs(this.currentFloor.object3D.getWorldPosition(new Vector3()).y - targetY) : Infinity;
+        const candidateDist = Math.abs(entity.object3D.getWorldPosition(new Vector3()).y - targetY);
+
+        if (!this.currentFloor || candidateDist < currentDist) {
             const area = entity.getValue(PlaneClassification, 'area');
-            console.log(`setting new floor: area`, area, `y`, entity.object3D?.position.y, `plane object`, entity.object3D,);
+            console.log(`setting new floor: area`, area, `y`, entity.object3D.position.y, `vertical dist. to target`, candidateDist);
             if (this.currentFloor?.object3D) {
                 this.currentFloor.object3D.visible = false;
             }

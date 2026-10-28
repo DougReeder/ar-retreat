@@ -7,5 +7,6 @@
 
 import { defineComponents } from '@iwsdk/core';
 import { Robot } from './robot-component.js';
+import {PlaneClassification} from "./floor/PlaneClassification";
 
-export default defineComponents([Robot]);
+export default defineComponents([Robot, PlaneClassification]);

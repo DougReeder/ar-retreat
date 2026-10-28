@@ -74,7 +74,7 @@ const stoneMaterial = createSceneMaterial({
 });
 
 // Dark, glossy graphite marks everything you can interact with.
-const graphiteMaterial = createSceneMaterial({
+export const graphiteMaterial = createSceneMaterial({
   id: 'studio-graphite',
   model: 'physical',
   baseColor: '#464950',

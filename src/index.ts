@@ -9,6 +9,7 @@ import {DepthSensingSystem, World} from '@iwsdk/core';
 import projectOptions from 'virtual:iwsdk-project';
 import { PanelSystem } from './panel.js';
 import { RobotSystem } from './robot.js';
+import {PlaneProcessSystem} from "./floor/PlaneProcessSystem";
 
 World.create(
   document.getElementById('scene-container') as HTMLDivElement,
@@ -17,4 +18,5 @@ World.create(
   world.registerSystem(RobotSystem);
   world.registerSystem(PanelSystem);
   world.registerSystem(DepthSensingSystem);
+  world.registerSystem(PlaneProcessSystem);
 });

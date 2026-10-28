@@ -3,7 +3,7 @@
 
 import {
     createSystem, Entity, eq, ge, Vector3, Box3,
-    XRPlane, AssetManager, Quaternion,
+    XRPlane, AssetManager, Quaternion, DepthOccludable,
 } from '@iwsdk/core';
 import {Orientation, PlaneClassification} from "./PlaneClassification";
 
@@ -109,7 +109,8 @@ export class PlaneProcessSystem extends createSystem({
         if (!asset) { return; }
         const birch1Object = asset.scene;
 
-        this.birch1Entity = this.world.createTransformEntity(birch1Object);
+        this.birch1Entity = this.world.createTransformEntity(birch1Object)
+            .addComponent(DepthOccludable);
 
         // Scale to 2 meters tall
         const box = new Box3().setFromObject(birch1Object);

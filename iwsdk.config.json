@@ -15,8 +15,10 @@
       "features": {
         "planeDetection": true,
         "depthSensing": {"required": false, "usage": "gpu-optimized", "format": "float32"},
-        "handTracking": true
-      }
+        "handTracking": true,
+        "unbounded": true
+      },
+      "referenceSpace": "unbounded"
     },
     "input": {
       "canvasPointerEvents": true
